@@ -1,9 +1,13 @@
 /* Roboto font import */
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
 
+*{
+  box-sizing: border-box;
+}
 
 body{
-  padding: 2rem;
-  text-align: center;
+  /* padding: 2rem; */
+  margin:0;
+  padding:0;
   font-family: 'Roboto', sans-serif;
 }
