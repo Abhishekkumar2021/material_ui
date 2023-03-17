@@ -25,9 +25,38 @@ import MuiBreadCrumbs from "./Components/MuiBreadCrumbs";
 import MuiDrawer from "./Components/MuiDrawer";
 import MuiSpeedDial from "./Components/MuiSpeedDial";
 import MuiBottomNavigation from "./Components/MuiBottomNavigation";
+import MuiAvatar from "./Components/MuiAvatar";
+import MuiBadge from "./Components/MuiBadge";
+import MuiList from "./Components/MuiList";
+import MuiChip from "./Components/MuiChip";
+import MuiTooltip from "./Components/MuiTooltip";
+import MuiTable from "./Components/MuiTable";
+import MuiAlert from "./Components/MuiAlert";
+import MuiSnackbar from "./Components/MuiSnackbar";
+import MuiDialog from "./Components/MuiDialog";
+import MuiProgress from "./Components/MuiProgress";
+import MuiSkelton from "./Components/MuiSkelton";
+import MuiLoadingButton from "./Components/MuiLoadingButton";
+import MuiDateAndTimePicker from "./Components/MuiDateAndTimePicker";
+import { createTheme } from '@mui/material/styles'
+import { colors } from "@mui/material";
+import { ThemeProvider } from '@mui/material/styles';
+import MuiColor from "./Components/MuiColor";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: colors.deepOrange[500],
+    },
+    secondary: {
+      main: colors.green[500],
+    },
+  },
+});
 
 function App() {
   return (
+    <ThemeProvider theme={theme}>
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
@@ -53,9 +82,23 @@ function App() {
         <Route path="/breadcrumbs" element={<MuiBreadCrumbs />} />
         <Route path="/drawer" element={<MuiDrawer />} />
         <Route path="/speeddial" element={<MuiSpeedDial />} />
+        <Route path="/avatar" element={<MuiAvatar />} />
         <Route path="/bottomnavigation" element={<MuiBottomNavigation />} />
-
+        <Route path="/badge" element={<MuiBadge />} />
+        <Route path="/list" element={<MuiList />} />
+        <Route path="/chip" element={<MuiChip />} />
+        <Route path="/tooltip" element={<MuiTooltip />} />
+        <Route path="/table" element={<MuiTable />} />
+        <Route path="/alert" element={<MuiAlert />} />
+        <Route path="/snackbar" element={<MuiSnackbar />} />
+        <Route path="/dialog" element={<MuiDialog />} />
+        <Route path="/progress" element={<MuiProgress />} />
+        <Route path="/skelton" element={<MuiSkelton />} />
+        <Route path="/datetimepicker" element={<MuiDateAndTimePicker />} />
+        <Route path="/loadingbutton" element={<MuiLoadingButton />} />
+        <Route path="/color" element={<MuiColor />} />
         <Route path="*" element={<h1>Not Found</h1>} />
+
       </Routes>
 
       {/* Home will contains all the Links */}
@@ -132,8 +175,51 @@ function App() {
         <Button variant="contained" color="primary" href="/bottomnavigation">
           BottomNavigation
         </Button>
+        <Button variant="contained" color="primary" href="/avatar">
+          Avatar
+        </Button>
+        <Button variant="contained" color="primary" href="/badge">
+          Badge
+        </Button>
+        <Button variant="contained" color="primary" href="/list">
+          List
+        </Button>
+        <Button variant="contained" color="primary" href="/chip">
+          Chip
+        </Button>
+        <Button variant="contained" color="primary" href="/tooltip">
+          Tooltip
+        </Button>
+        <Button variant="contained" color="primary" href="/table">
+          Table
+        </Button>
+        <Button variant="contained" color="primary" href="/alert">
+          Alert
+        </Button>
+        <Button variant="contained" color="primary" href="/snackbar">
+          Snackbar
+        </Button>
+        <Button variant="contained" color="primary" href="/dialog">
+          Dialog
+        </Button>
+        <Button variant="contained" color="primary" href="/progress">
+          Progress
+        </Button>
+        <Button variant="contained" color="primary" href="/skelton">
+          Skelton
+        </Button>
+        <Button variant="contained" color="primary" href="/loadingbutton">
+          LoadingButton
+        </Button>
+        <Button variant="contained" color="primary" href="/datetimepicker">
+          DateAndTimePicker
+        </Button>
+        <Button variant="contained" color="primary" href="/color">
+          Color
+        </Button>
       </Stack>
     </div>
+    </ThemeProvider>
   );
 }
 
